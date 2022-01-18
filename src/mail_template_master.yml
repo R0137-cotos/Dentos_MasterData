@@ -1,0 +1,134 @@
+mail_template_master:
+  attribute:
+    id: NUMBER
+    created_at: TIMESTAMP
+    created_user_id: VARCHAR2
+    updated_at: TIMESTAMP
+    updated_user_id: VARCHAR2
+    version: NUMBER
+    service_category: VARCHAR2
+    process_category: VARCHAR2
+    product_grp_master_id: NUMBER
+    mail_subject: VARCHAR2
+    mail_body: CLOB
+    envelope_from: VARCHAR2
+  values:
+    - id: 2001
+      created_at: 2019/09/17
+      created_user_id: COTOS
+      updated_at: 2019/09/17
+      updated_user_id: COTOS
+      version: 1
+      service_category: "102"
+      process_category: "0"
+      product_grp_master_id: 10
+      mail_subject: "電力料金に関するご案内 {{replaceValue1}}"
+      mail_body: |-
+        {{replaceValue1}}
+        ご担当者様
+
+        日頃より弊社の電力供給サービスをご利用頂きありがとうございます。
+        電力料金の請求に関するご案内です。
+
+        ご請求書と日別電力使用量を本メールに添付しております。
+        ご確認を宜しくお願いします。
+
+        なお、弊社からの「電力料金に関する案内」（本メール）は、原則として毎月第5営業日に発信しております。
+        （土日祝日の場合は翌営業日）
+
+        ●請求書の開き方●
+        ①本メールに添付されている請求書をPCに保存してください。
+        ②保存した請求書をダブルクリックすると、パスワードを入力するウィンドウが開きます。
+        ③別に受信したパスワードメールに記載されているパスワードを入力し、OKを押下してください。
+        　請求書のファイルが開きます。
+
+        ●その他のご案内●
+        ①電気需給約款[高圧]等は当社のウェブサイトに掲載しております。
+        　　https://www.ricoh.co.jp/solution/electricity/high/
+
+        ②請求書ダウンロードサービス
+        　　過去の請求関連帳票をWebよりダウンロード頂けます。
+        　　　　https://www.myricoh.jp/
+        　　※ご利用いただくためには、MyRICOHご利用登録が必要となります。
+        　　※MyRICOHご利用登録後、約2～3営業日にて本サービスがご利用頂けます。
+
+        【お問い合わせ窓口】
+        電力コールセンター　0120-069-089　9:00～18:00（365日）
+
+        【発行】
+        リコージャパン株式会社　電力業務担当
+        －－－－－－－－－－
+        ※本メールは、『電力料金に関するご案内』の送付先としてご登録いただいたお客様に配信しています。
+        ※ご担当が替わられている場合には、至急ご連絡くださいますようよろしくお願い申し上げます。
+        ※配信専用のメールアドレスよりお送りしております。
+        　本メール返信によるお問い合わせにはお答えできませんのでご注意下さい。
+      envelope_from: zjc_oshiraseshindenryoku@jp.ricoh.com
+    - id: 2003
+      created_at: 2019/09/17
+      created_user_id: COTOS
+      updated_at: 2019/09/17
+      updated_user_id: COTOS
+      version: 1
+      service_category: "102"
+      process_category: "0"
+      product_grp_master_id: 10
+      mail_subject: "[Password]電力料金に関するご案内 {{replaceValue1}}"
+      mail_body: |-
+        別途お送りしている以下の対象メールに添付されている暗号ファイルのパスワードを通知いたします。
+        以下の情報を参考に、本メールに記載されているパスワードをご使用ください。
+
+        ----------------------------------------
+        Password:
+        {{replaceValue1}}
+        ご請求書と日別電力使用量を本メールに添付しております。
+        ----------------------------------------
+        　パスワード入力は　コピー＆貼り付け　をご利用ください。
+
+        対象メール:
+        Date: {{replaceValue2}}
+        From: {{replaceValue3}}
+        To: {{replaceValue4}}
+        Cc: {{replaceValue5}}
+        Subject: 電力料金に関するご案内 {{replaceValue6}}
+
+
+        ※このメールのみ受信した場合
+        添付ファイルが受信側メールサーバで拒否されている可能性がありますので、下記電力コールセンターまでお問合せください。
+
+
+        【お問合わせ窓口】
+        電力コールセンター　0120-069-089　9:00～18:00（365日）
+
+        【発行】
+        リコージャパン株式会社　電力業務担当
+        －－－－－－－－－－
+        ※配信専用のメールアドレスよりお送りしております。
+        　本メール返信によるお問い合わせにはお答えできませんのでご注意下さい。
+      envelope_from: zjc_oshiraseshindenryoku@jp.ricoh.com
+    - id: 2005
+      created_at: 2019/09/17
+      created_user_id: COTOS
+      updated_at: 2019/09/17
+      updated_user_id: COTOS
+      version: 1
+      service_category: "102"
+      process_category: "0"
+      product_grp_master_id: 10
+      mail_subject: "【リコージャパン電力】{{replaceValue1}}様　電気小売媒介手数料お支払通知"
+      mail_body: |-
+        {{replaceValue1}}
+        ご担当者様
+
+        いつも大変お世話になっております。
+        リコージャパン株式会社　電力小売り担当です。
+
+        早速ですが、{{replaceValue2}}にお振込予定の手数料の内容を送付致しますので
+        ご査収下さるようお願い申し上げます。
+
+
+        【お問い合わせ窓口】
+        電力コールセンター　0120-069-089　9:00～18:00（365日）
+
+        【発行】
+        リコージャパン株式会社　電力小売業務担当
+      envelope_from: null
