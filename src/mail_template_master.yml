@@ -13,6 +13,26 @@ mail_template_master:
     mail_body: CLOB
     envelope_from: VARCHAR2
   values:
+    - id: 37
+      created_at: 2019/07/09
+      created_user_id: COTOS
+      updated_at: 2019/07/09
+      updated_user_id: COTOS
+      version: 1
+      service_category: "1"
+      process_category: "1"
+      product_grp_master_id: 10
+      mail_subject: "【電力】見積承認依頼メール{{replaceValue2}}様"
+      mail_body: |-
+        {{replaceValue2}}様の見積の承認を依頼されました。
+        商品グループ：{{replaceValue3}}
+        見積番号：{{replaceValue6}}
+        コメント：{{replaceValue4}}
+        下記リンクから確認してください。
+        {{replaceValue5}}
+
+        送信専用アドレスから送信しています。返信しないでください。
+      envelope_from: null
     - id: 2001
       created_at: 2019/09/17
       created_user_id: COTOS
@@ -33,7 +53,7 @@ mail_template_master:
         ご請求書と日別電力使用量を本メールに添付しております。
         ご確認を宜しくお願いします。
 
-        なお、弊社からの「電力料金に関する案内」（本メール）は、原則として毎月第5営業日に発信しております。
+        なお、弊社からの「電力料金に関する案内」（本メール）は、原則として毎月第4営業日に発信しております。
         （土日祝日の場合は翌営業日）
 
         ●請求書の開き方●
@@ -62,7 +82,7 @@ mail_template_master:
         ※ご担当が替わられている場合には、至急ご連絡くださいますようよろしくお願い申し上げます。
         ※配信専用のメールアドレスよりお送りしております。
         　本メール返信によるお問い合わせにはお答えできませんのでご注意下さい。
-      envelope_from: zjc_oshiraseshindenryoku@jp.ricoh.com
+      envelope_from: zjc_oshiraseshindenryoku@ml.ricoh.com
     - id: 2003
       created_at: 2019/09/17
       created_user_id: COTOS
@@ -82,14 +102,13 @@ mail_template_master:
         {{replaceValue1}}
         ご請求書と日別電力使用量を本メールに添付しております。
         ----------------------------------------
-        　パスワード入力は　コピー＆貼り付け　をご利用ください。
+        　パスワード入力は「コピー＆貼り付け」をご利用ください。
 
         対象メール:
         Date: {{replaceValue2}}
         From: {{replaceValue3}}
         To: {{replaceValue4}}
-        Cc: {{replaceValue5}}
-        Subject: 電力料金に関するご案内 {{replaceValue6}}
+        Subject: 電力料金に関するご案内 {{replaceValue5}}
 
 
         ※このメールのみ受信した場合
@@ -104,7 +123,7 @@ mail_template_master:
         －－－－－－－－－－
         ※配信専用のメールアドレスよりお送りしております。
         　本メール返信によるお問い合わせにはお答えできませんのでご注意下さい。
-      envelope_from: zjc_oshiraseshindenryoku@jp.ricoh.com
+      envelope_from: zjc_oshiraseshindenryoku@ml.ricoh.com
     - id: 2005
       created_at: 2019/09/17
       created_user_id: COTOS
